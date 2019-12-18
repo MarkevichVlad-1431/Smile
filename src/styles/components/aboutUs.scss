@@ -1,0 +1,53 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+#content {
+  position: relative;
+
+  &::before {
+    @extend .beforeContent;
+    opacity: 0.3;
+  }
+
+  #aboutUs {
+    position: relative;
+
+    padding: 90px 0;
+
+    text-align: center;
+
+    .titleText {
+      font-size: 60px;
+      font-family: $titleTextFont;
+      color: #000;
+    }
+
+    .title {
+      font-size: 60px;
+      font-family: $titleFont;
+      color: #000;
+    }
+
+    .tagline {
+      margin: 50px 0;
+      font-size: 20px;
+      color: #000;
+      font-family: $taglineFont;
+    }
+
+    hr {
+      width: 80px;
+      height: 3px;
+      background-color: #000;
+    }
+
+    .text {
+      margin-top: 50px;
+
+      font-family: $textFont;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+
+}

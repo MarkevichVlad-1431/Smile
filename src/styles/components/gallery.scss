@@ -1,0 +1,81 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+#gallery {
+  padding: 130px 0;
+  text-align: left;
+
+  @media screen and (max-width: 992px) {
+    padding: 30px 0;
+  }
+
+  .title {
+    font-size: 60px;
+    font-family: $titleFont;
+    color: #000;
+  }
+
+  hr {
+    margin-left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #000;
+  }
+
+  .firstLine {
+    display: flex;
+    margin-top: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      margin-top: 30px;
+    }
+
+    .section {
+      padding: 50px;
+      border: 1px solid #eae9e7;
+
+      @extend .sectionExtend;
+    }
+  }
+
+  .secondLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .section {
+      padding: 50px;
+      border: 1px solid #eae9e7;
+
+      @extend .sectionExtend;
+    }
+  }
+
+  .button {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+
+    button {
+
+      padding: 20px 50px;
+      font-family: $mainFont;
+      font-size: 20px;
+      line-height: 30px;
+      color: #000;
+
+      border: 2px solid #000;
+      border-radius: 5px;
+
+    }
+  }
+}

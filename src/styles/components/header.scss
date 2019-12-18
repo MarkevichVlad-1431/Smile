@@ -1,0 +1,229 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+.openMenu {
+  position: relative;
+
+  height: 100vh;
+  padding: 50px 0 100px 0;
+
+  background-image: url(../assets/img/bg_header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    @extend .before;
+    opacity: 0.9;
+  }
+}
+
+header {
+  position: relative;
+
+  height: 100vh;
+  min-height: 500px;
+  padding: 50px 0 100px 0;
+
+  background-image: url(../assets/img/bg_header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+
+  .menu {
+    display: flex;
+
+    text-align: right;
+    justify-content: space-between;
+
+    .logo {
+      padding: 25px 30px;
+
+      font-size: 30px;
+      font-family: $mainFont;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      background-color: #000;
+    }
+
+    .nav {
+      z-index: 5;
+
+      font-family: $mainFont;
+      font-size: 15px;
+      color: #fff;
+      text-transform: uppercase;
+
+      animation: shake 5s linear reverse infinite;
+
+      @keyframes shake {
+        100% {
+          transform: translateY(-30px);
+        }
+
+        50% {
+          transform: translateY(30px);
+        }
+
+        0% {
+          transform: translateY(-30px);
+        }
+      }
+
+      b {
+        padding: 3px 0;
+        border-top: 4px solid #fff;
+        border-bottom: 4px solid #fff;
+      }
+
+      .exit {
+        display: none;
+      }
+    }
+
+    .navOpen {
+      z-index: 5;
+
+      font-family: $mainFont;
+      font-size: 15px;
+      color: #fff;
+      text-transform: uppercase;
+
+      b {
+        display: none;
+      }
+
+      .exit {
+        padding-top: 20px;
+        display: block;
+        height: 55px;
+
+        hr {
+          width: 50px;
+          height: 5px;
+          background-color: #fff;
+
+          &:first-child {
+            transform: scale(1) rotate(50deg);
+            transform-origin: 30% -20%;
+          }
+
+          transform: scale(1) rotate(-50deg);
+          transform-origin: 35% 50%;
+
+        }
+
+      }
+    }
+
+    nav {
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      z-index: 5;
+
+      display: none; //flex
+      flex-direction: column;
+      text-align: left;
+
+      a {
+        font-family: $mainFont;
+        font-size: 50px;
+        line-height: 80px;
+        color: $navColor;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 30px;
+          line-height: 50px;
+        }
+
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+
+
+    }
+  }
+
+  .textHeader {
+    position: absolute;
+    top: 50%;
+
+    margin-top: -123px;
+    margin-left: -100px;
+    left: 50%;
+
+    text-align: right;
+
+    @media (min-width: 992px) and (max-width: 1200px) {
+      left: 40%;
+    }
+
+    @media screen and (max-width: 769px) {
+      top: 60%;
+      left: 40%;
+    }
+
+    .title {
+      font-family: $titleHeader;
+      font-size: 220px;
+      line-height: 150px;
+      color: #fff;
+      text-transform: uppercase;
+
+      @media (min-width: 769px) and (max-width: 992px) {
+        font-size: 140px;
+        line-height: 80px;
+      }
+
+      @media (min-width: 320px) and (max-width: 769px) {
+        text-align: center;
+        font-size: 60px;
+        line-height: 40px;
+      }
+    }
+
+    .tagline {
+      font-family: $titleHeader;
+      font-size: 64px;
+      letter-spacing: 2px;
+      color: #fff;
+
+      @media (min-width: 769px) and (max-width: 992px) {
+        font-size: 40px;
+      }
+
+      @media (min-width: 320px) and (max-width: 769px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .slider {
+    position: absolute;
+    left: 50%;
+    margin-left: -106px;
+    bottom: 50px;
+
+    button {
+      width: 20px;
+      margin: 10px;
+      height: 20px;
+
+      background-color: #000;
+      border-radius: 50px;
+
+      &:active {
+        background-color: #fff;
+      }
+    }
+  }
+}

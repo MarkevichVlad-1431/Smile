@@ -1,0 +1,66 @@
+@import 'variables.scss';
+@import '../helpers/extends.scss';
+
+#categories {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  .leftSide {
+    width: 50%;
+    padding: 130px 215px 80px 100px;
+    background-color: $bgCategories;
+
+    @media screen and (max-width: 992px) {
+      padding: 20px 20px 20px 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    .text {
+      box-sizing: border-box;
+
+      font-size: 24px;
+      line-height: 30px;
+      font-family: $titleFont;
+      color: #000;
+
+      span {
+        font-family: $spanFont;
+      }
+    }
+
+    .contentSlider {
+      margin-top: 50px;
+
+      button {
+        width: 10px;
+        margin: 5px;
+        height: 10px;
+
+        border-radius: 50px;
+        border: 1px solid $bgcButtonSlider;
+
+        &:hover {
+          background-color: $bgcButtonSlider;
+        }
+      }
+    }
+  }
+
+  .rightSide {
+    width: 50%;
+
+    background-image: url(../assets/img/bg_rigthSide.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+}
